@@ -1,0 +1,23 @@
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  margin: 3.5rem 0;
+}
+
+.button {
+  padding: 5px 20px;
+  background-color: #fff;
+  border: 2px solid #f7941d;
+  color: #333;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: #f7941d;
+  color: white;
+}
