@@ -1,0 +1,108 @@
+.hero {
+  position: relative;
+  background: url("/skyplane.jpg") center/cover no-repeat;
+  width: 100%;
+  color: #333;
+  min-height: 500px;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 6.6rem;
+    border: 1px solid white;
+    border-radius: 2px;
+
+}
+
+.overlay {
+  padding: 40px 20px;
+}
+
+
+.title {
+    max-width: 500px;
+    padding: 2rem 2rem;
+  font-size: 50px;
+  font-weight: 200;
+  text-align: left;
+}
+
+.navTabs {
+    background-color: white;
+  display: flex;
+  gap: 6.5rem;
+  border-bottom: 1px solid black;
+}
+
+.navTabs button {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.activeTab {
+  background-color: #da7605 !important;
+  color: rgb(17, 17, 17);
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.rowTop {
+  display: flex;
+  gap: 5rem;
+  font-size: 14px;
+}
+
+.rowBottom {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.inputGroup label {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.inputGroup input {
+  padding: 8px;
+  border: 1px solid #e27611;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.searchButton {
+  background-color: #ff9900;
+  color: rgb(22, 22, 22);
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.searchButton:hover {
+  background-color: #e68600;
+}
