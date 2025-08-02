@@ -1,0 +1,96 @@
+.banner {
+  position: relative;
+  background-color: rgb(108, 196, 244);
+  width: 100%;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+
+.priceTag {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  background: #791D1D;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  z-index: 2;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.priceTag span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.priceTag strong {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.content {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+}
+
+.title {
+  margin: 0;
+  width: 100%;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #003d7a;
+}
+
+.button {
+  background-color: #f7941d;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.button:hover {
+  background-color: #da7605;
+}
+
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dots li {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #f7941d;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dots li.active {
+  background-color: #f7941d;
+}
