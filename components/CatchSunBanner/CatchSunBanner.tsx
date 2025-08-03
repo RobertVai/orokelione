@@ -8,7 +8,7 @@ const CatchSunBanner = () => {
 
       
       <div className={styles.content}>
-        <h2 className={styles.title}>Let’s catch the sun!</h2>
+        <h2 className={styles.title}>Let’s catch the<br/>sun!</h2>
         <button className={styles.button}>Book now</button>
       </div>
 
