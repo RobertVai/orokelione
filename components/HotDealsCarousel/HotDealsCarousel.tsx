@@ -8,12 +8,12 @@ type Deal = {
 }
 
 const deals: Deal[] = [
-  { city: 'Corfu',  imageUrl: 'https://lp-cms-production.imgix.net/2024-12/GettyRF178407725.jpg?auto=format,compress&q=72&fit=crop',  price: '99.99' },
-  { city: 'Athens', imageUrl: 'https://lp-cms-production.imgix.net/2024-12/GettyRF178407725.jpg?auto=format,compress&q=72&fit=crop', price: '121.99' },
-  { city: 'Malaga', imageUrl: 'https://lp-cms-production.imgix.net/2024-12/GettyRF178407725.jpg?auto=format,compress&q=72&fit=crop', price: '130.99' },
-  { city: 'Rome',   imageUrl: 'https://lp-cms-production.imgix.net/2024-12/GettyRF178407725.jpg?auto=format,compress&q=72&fit=crop',   price: '79.99' },
-  { city: 'Vienna', imageUrl: 'https://lp-cms-production.imgix.net/2024-12/GettyRF178407725.jpg?auto=format,compress&q=72&fit=crop', price: '81.99' },
-  { city: 'Mallorca', imageUrl: 'https://lp-cms-production.imgix.net/2024-12/GettyRF178407725.jpg?auto=format,compress&q=72&fit=crop', price: '81.99' },
+  { city: 'Corfu',  imageUrl: '/images/corfu.jpg',  price: '99.99' },
+  { city: 'Athens', imageUrl: '/images/athens.jpg', price: '121.99' },
+  { city: 'Malaga', imageUrl: '/images/malaga.jpg', price: '130.99' },
+  { city: 'Rome',   imageUrl: '/images/rome.jpg',   price: '79.99' },
+  { city: 'Vienna', imageUrl: '/images/vienna.jpg', price: '81.99' },
+  { city: 'Mallorca', imageUrl: '/images/corfu.jpg', price: '81.99' },
 ]
 
 const HotDealsCarousel: FC = () => {
