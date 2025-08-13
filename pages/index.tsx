@@ -6,6 +6,7 @@ import CatchSunBanner from "@/components/CatchSunBanner/CatchSunBanner";
 import TopDestinations from "@/components/TopDestinations/TopDestinations";
 import HotDealsCarousel from "@/components/HotDealsCarousel/HotDealsCarousel";
 import WhyTravel from "@/components/WhyTravel/WhyTravel";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <TopDestinations />
       <HotDealsCarousel />
       <WhyTravel />
+      <Footer />
 
     </div>
   );
