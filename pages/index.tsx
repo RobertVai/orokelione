@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css"
 import CatchSunBanner from "@/components/CatchSunBanner/CatchSunBanner";
 import TopDestinations from "@/components/TopDestinations/TopDestinations";
 import HotDealsCarousel from "@/components/HotDealsCarousel/HotDealsCarousel";
+import WhyTravel from "@/components/WhyTravel/WhyTravel";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <CatchSunBanner />
       <TopDestinations />
       <HotDealsCarousel />
+      <WhyTravel />
 
     </div>
   );
