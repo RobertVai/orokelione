@@ -107,14 +107,13 @@
 .arrowLeft,
 .arrowRight {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 49%;
   background: #0071c2;
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   font-size: 24px;
   display: flex;
   align-items: center;
