@@ -10,7 +10,12 @@ import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
+    <div className={styles.pagewrapper}>
+      <div className={styles.alert}>
+        <b> ATTENTION! Brussels Airlines has warned passengers to expect strikes on May 20th and 22nd and affecting public transport... (more info)</b>
+      </div>
     <div className={styles.container}>
+      
       <Header />
       <Hero />
       <ActionButtons />
@@ -18,8 +23,13 @@ export default function Home() {
       <TopDestinations />
       <HotDealsCarousel />
       <WhyTravel />
-      <Footer />
+      
+    
 
     </div>
+    <Footer />
+    </div>
+    
+    
   );
 }

@@ -9,8 +9,8 @@ export default function Hero() {
             <div className={styles.contentBox}>
           <div className={styles.navTabs}>
             <button className={styles.activeTab}>✈ Flights</button>
-            <button>🚗 Car rentals</button>
-            <button>🏨 Hotel</button>
+            <button className={styles.rent}> <img className={styles.svg} src="/svg/car.svg" alt="Car rent" /> Car rentals</button>
+            <button className={styles.rent}> <img className={styles.svg} src="/svg/bed.svg" alt="Hotel rent" /> Hotel</button>
           </div>
 
           <form className={styles.searchForm}>

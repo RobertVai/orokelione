@@ -5,11 +5,11 @@
   padding: 0;
 }
 
-
 body {
   font-family: sans-serif;
   color: #222;
-  padding: 0 15rem;
+
+  background-color: #E8E8E8;
 }
 
 main {
@@ -17,3 +17,7 @@ main {
   margin: 0 auto;
   padding-bottom: 60px;
 }
+
+
+
+
