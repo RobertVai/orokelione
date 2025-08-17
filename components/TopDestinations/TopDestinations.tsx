@@ -16,9 +16,9 @@ const destinations: Destination[] = [
   { city: 'Barcelona', imageUrl: '/images/barcelona.jpg', price: '99.99' },
 
   
-  { city: 'Amsterdam', imageUrl: '/images/corfu.jpg', price: '59.99' },
-  { city: 'Prague',    imageUrl: '/images/corfu.jpg',    price: '45.99' },
-  { city: 'Lisbon',    imageUrl: '/images/corfu.jpg',    price: '65.99' },
+  { city: 'Amsterdam', imageUrl: '/images/amsterdam.jpg', price: '59.99' },
+  { city: 'Prague',    imageUrl: '/images/prague.jpg',    price: '45.99' },
+  { city: 'Lisbon',    imageUrl: '/images/lisbon.jpg',    price: '65.99' },
 ]
 
 const TopDestinations: FC = () => {

@@ -16,13 +16,13 @@ const benefits: Benefit[] = [
   {
     title: "Reliable Partnerships",
     text:
-      "We partner with companies that prioritize safety, sustainability and responsible tourism.",
+      "We are increasingly focused on partnering with businesses that prioritize sustainability and responsible tourism practices.",
     image: "/images/deal.jpg",
   },
   {
     title: "Secure Payment",
     text:
-      "We use secure payment gateways and never store your full card details on our systems.",
+      "We use secure payment gateways to process your transactions, and we do not store your full credit card details on our own systems.",
     image: "/images/cardpay.jpg",
   },
 ];

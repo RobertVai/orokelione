@@ -50,6 +50,16 @@
   color: rgb(17, 17, 17);
 }
 
+.svg {
+  width: 20px;
+  height: 20px;
+}
+
+.rent {
+  display: flex;
+  gap: 0.2rem;
+
+}
 .searchForm {
   display: flex;
   flex-direction: column;

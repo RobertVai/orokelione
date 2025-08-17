@@ -6,13 +6,6 @@
   font-family: sans-serif;
 }
 
-.alert {
-  background-color: #ffe0e0;
-  color: #000000;
-  padding: 8px;
-  font-size: 14px;
-  text-align: center;
-}
 
 .navbar {
   display: flex;
@@ -46,6 +39,16 @@
     height: 35px;
     width: 35px;
     
+}
+.svg {
+  width: 20px;
+  height: 20px;
+}
+
+.rent {
+  display: flex;
+  gap: 0.2rem;
+
 }
 
 .navLinks {
