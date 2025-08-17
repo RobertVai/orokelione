@@ -1,0 +1,99 @@
+.results {
+  padding: 24px 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sidebar {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  display: grid;
+  gap: 14px;
+}
+
+.heading {
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sort {
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+  gap: 24px;
+}
+
+.info {
+  flex: 1;
+}
+
+.airline {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.direct {
+  color: #1e90ff;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.priceBox {
+  text-align: right;
+  min-width: 160px;
+}
+
+.warning {
+  color: #e63946;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 6px 0;
+}
+
+.book {
+  background: #f59c1a;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.details {
+  display: block;
+  background: transparent;
+  border: none;
+  color: #1e90ff;
+  cursor: pointer;
+  font-size: 14px;
+}
