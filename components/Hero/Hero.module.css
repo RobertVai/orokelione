@@ -2,8 +2,7 @@
   position: relative;
   background: url("/skyplane.jpg") center/cover no-repeat;
   width: 100%;
-  color: #333;
-  min-height: 500px;
+  min-height: 520px;
 }
 
 .contentBox {
@@ -71,8 +70,26 @@
 
 .rowTop {
   display: flex;
-  gap: 5rem;
-  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+}
+
+.inline { display: inline-flex; }
+
+.select {
+  height: 36px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0 10px;
+  background: #fff;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
 }
 
 .rowBottom {

@@ -14,13 +14,29 @@ export default function Hero() {
           </div>
 
           <form className={styles.searchForm}>
-            <div className={styles.rowTop}>
-              <span>Round trip ▼</span>
-              <span>1 Traveller, Economy ⚙</span>
-              <label>
-                <input type="checkbox" /> Direct flights only
-              </label>
-            </div>
+          <div className={styles.rowTop}>
+            <label className={styles.inline}>
+              <select className={styles.select}>
+                <option>Round trip</option>
+                <option>One way</option>
+                <option>Multi-city</option>
+              </select>
+            </label>
+
+            <label className={styles.inline}>
+              
+              <select className={styles.select}>
+                <option>1 Traveller, Economy</option>
+                <option>2 Travellers, Economy</option>
+                <option>1 Traveller, Business</option>
+              </select>
+            </label>
+
+            <label className={styles.checkbox}>
+              <input type="checkbox" />
+              <span>Direct flights only</span>
+            </label>
+          </div>
 
             <div className={styles.rowBottom}>
               <div className={styles.inputGroup}>

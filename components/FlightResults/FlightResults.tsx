@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FlightResults.module.css";
+import TicketCard from "../TicketCard/TicketCard";
 
 export default function FlightResults() {
   return (
@@ -47,33 +48,45 @@ export default function FlightResults() {
           </div>
 
          
-          <div className={styles.card}>
-            <div className={styles.info}>
-              <h4 className={styles.airline}>Air Baltic</h4>
-              <p>17:20 VNO → 18:10 RIX <span className={styles.direct}>Direct</span></p>
-              <p>20:10 RIX → 21:00 VNO <span className={styles.direct}>Direct</span></p>
-            </div>
-            <div className={styles.priceBox}>
-              <p className={styles.warning}>Only 5 tickets left!</p>
-              <p className={styles.price}>€ 79.99</p>
-              <button className={styles.book}>Book</button>
-              <button className={styles.details}>Flight details</button>
-            </div>
-          </div>
 
-          <div className={styles.card}>
-            <div className={styles.info}>
-              <h4 className={styles.airline}>Air Baltic</h4>
-              <p>14:40 VNO → 15:30 RIX <span className={styles.direct}>Direct</span></p>
-              <p>20:10 RIX → 21:00 VNO <span className={styles.direct}>Direct</span></p>
-            </div>
-            <div className={styles.priceBox}>
-              <p className={styles.warning}>Only 2 tickets left!</p>
-              <p className={styles.price}>€ 81.99</p>
-              <button className={styles.book}>Book</button>
-              <button className={styles.details}>Flight details</button>
-            </div>
-          </div>
+<TicketCard
+  airline="Air Baltic"
+  warning="Only 5 tickets left!"
+  price="€ 79.99"
+  segments={[
+    { departTime:"17:20", arriveTime:"18:10", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
+    { departTime:"20:10", arriveTime:"21:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
+  ]}
+/>
+  <TicketCard
+  airline="Air Baltic"
+  warning="Only 5 tickets left!"
+  price="€ 79.99"
+  segments={[
+    { departTime:"17:20", arriveTime:"18:10", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
+    { departTime:"20:10", arriveTime:"21:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
+  ]}
+/>
+<TicketCard
+  airline="Air Baltic"
+  warning="Only 5 tickets left!"
+  price="€ 79.99"
+  segments={[
+    { departTime:"17:20", arriveTime:"18:10", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
+    { departTime:"20:10", arriveTime:"21:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
+  ]}
+/>
+<TicketCard
+  airline="Air Baltic"
+  warning="Only 5 tickets left!"
+  price="€ 79.99"
+  segments={[
+    { departTime:"17:20", arriveTime:"18:10", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
+    { departTime:"20:10", arriveTime:"21:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
+  ]}
+/>
+           
+          
         </div>
       </div>
     </section>

@@ -20,12 +20,9 @@ const Footer = () => {
             <h4>Corporate</h4>
             <ul>
               <li>About us</li>
-              <li>People</li>
-              <li>Marketing projects</li>
               <li>Partners</li>
               <li>Newsletters</li>
               <li>Contact</li>
-              <li>Login</li>
               <li>Why travel with us</li>
             </ul>
           </div>
@@ -48,7 +45,6 @@ const Footer = () => {
               <li>Cheap flights</li>
               <li>Bookings</li>
               <li>FAQ</li>
-              <li>Group booking</li>
             </ul>
           </div>
         </div>
