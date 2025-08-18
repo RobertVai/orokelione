@@ -1,0 +1,29 @@
+.aboutWrapper {
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    gap: 3rem;
+}
+
+.aboutInfo {
+    
+}
+
+.titleWrapper {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    background-color: #DEEAF5;
+}
+
+
+.aboutWrapper img {
+    max-width: 530px;
+    border-radius: 5px;
+}
+
+.aboutInfo p {
+    display: flex;
+    font-size: 2rem;
+    padding: 0.2rem 0.2rem;
+}
