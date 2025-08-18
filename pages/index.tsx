@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className={styles.pagewrapper}>
       <div className={styles.alert}>
-        <b> ATTENTION! Brussels Airlines has warned passengers to expect strikes on May 20th and 22nd and affecting public transport... (more info)</b>
+        <b> ATTENTION! Brussels Airlines has warned passengers to expect strikes on November 20th and 22nd and affecting public transport... (more info)</b>
       </div>
     <div className={styles.container}>
       

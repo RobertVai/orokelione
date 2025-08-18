@@ -7,7 +7,7 @@ export default function FlightSearch() {
       <div className={styles.container}>
         <h2 className={styles.title}>Search your flight</h2>
 
-        {/* Tabs */}
+        
         <nav className={styles.tabs} aria-label="Product">
           <button className={`${styles.tab} ${styles.tabActive}`} aria-current="page">
             <span className={styles.tabIcon} aria-hidden>✈</span>
@@ -23,7 +23,7 @@ export default function FlightSearch() {
           </button>
         </nav>
 
-        {/* Search form */}
+        
         <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
           <div className={styles.rowTop}>
             <label className={styles.inline}>
