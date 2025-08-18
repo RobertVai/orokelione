@@ -60,11 +60,20 @@ export default function FlightResults() {
 />
   <TicketCard
   airline="Air Baltic"
-  warning="Only 5 tickets left!"
-  price="€ 79.99"
+  warning="Only 2 tickets left!"
+  price="€ 81.99"
   segments={[
-    { departTime:"17:20", arriveTime:"18:10", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
+    { departTime:"14:40", arriveTime:"15:30", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
     { departTime:"20:10", arriveTime:"21:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
+  ]}
+/>
+<TicketCard
+  airline="Air Baltic"
+  warning="Only 5 tickets left!"
+  price="€ 97.99"
+  segments={[
+    { departTime:"14:40", arriveTime:"15:30", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
+    { departTime:"17:10", arriveTime:"18:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
   ]}
 />
 <TicketCard
@@ -72,17 +81,8 @@ export default function FlightResults() {
   warning="Only 5 tickets left!"
   price="€ 79.99"
   segments={[
-    { departTime:"17:20", arriveTime:"18:10", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
-    { departTime:"20:10", arriveTime:"21:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
-  ]}
-/>
-<TicketCard
-  airline="Air Baltic"
-  warning="Only 5 tickets left!"
-  price="€ 79.99"
-  segments={[
-    { departTime:"17:20", arriveTime:"18:10", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
-    { departTime:"20:10", arriveTime:"21:00", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
+    { departTime:"21:50", arriveTime:"22:40", departCode:"VNO", arriveCode:"RIX", duration:"0h 50min", direct:true },
+    { departTime:"22:40", arriveTime:"23:30", departCode:"RIX", arriveCode:"VNO", duration:"0h 50min", direct:true }
   ]}
 />
            
