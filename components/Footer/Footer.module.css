@@ -54,7 +54,10 @@
   font-weight: 700;
 }
 
-.column ul { list-style: none; padding: 0; margin: 0; }
+.column ul { list-style: none;
+   padding: 0;
+    margin: 0;
+  text-decoration: none; }
 .column li {
   margin: 12px 0;
   font-size: 18px;
@@ -62,7 +65,11 @@
   color: #233142;
 }
 
-
+.column li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
 .socials {
   display: flex;
   justify-content: flex-end;
@@ -71,6 +78,8 @@
   font-size: 1.8rem;
   margin-top: 40px;
 }
+
+
 
 
 @media (max-width: 1024px) {
