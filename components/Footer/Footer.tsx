@@ -19,7 +19,7 @@ const Footer = () => {
             <h4>Corporate</h4>
             <ul>
               <li><Link href="/AboutUs">About us</Link></li>
-              <li><Link href="/SearchTickets">Partners</Link></li>
+              <li><Link href="/Partners">Partners</Link></li>
               <li><Link href="/ContactUs">Contact</Link></li>
             </ul>
           </div>
@@ -38,7 +38,7 @@ const Footer = () => {
             <ul>
               <li><Link href="/">Home</Link></li>
               <li><Link href="/SearchTickets">Book flight</Link></li>
-              <li><Link href="/SearchTickets">Airlines</Link></li>
+              <li><Link href="/Airlines">Airlines</Link></li>
               <li><Link href="/SearchTickets">Bookings</Link></li>
               <li><Link href="/FAQ">FAQ</Link></li>
             </ul>
