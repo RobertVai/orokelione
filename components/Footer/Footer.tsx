@@ -21,7 +21,6 @@ const Footer = () => {
               <li><Link href="/AboutUs">About us</Link></li>
               <li><Link href="/SearchTickets">Partners</Link></li>
               <li><Link href="/ContactUs">Contact</Link></li>
-              <li><Link href="/SearchTickets">Why travel with us</Link></li>
             </ul>
           </div>
 
@@ -37,11 +36,11 @@ const Footer = () => {
           <div className={styles.column}>
             <h4>Discover</h4>
             <ul>
+              <li><Link href="/">Home</Link></li>
               <li><Link href="/SearchTickets">Book flight</Link></li>
               <li><Link href="/SearchTickets">Airlines</Link></li>
-              <li><Link href="/SearchTickets">Cheap flights</Link></li>
               <li><Link href="/SearchTickets">Bookings</Link></li>
-              <li><Link href="/SearchTickets">FAQ</Link></li>
+              <li><Link href="/FAQ">FAQ</Link></li>
             </ul>
           </div>
         </div>
