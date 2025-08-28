@@ -14,10 +14,10 @@ export default function Header() {
         </div>
 
         <nav className={styles.navLinks}>
-          <a>Book flight</a>
-          <a>Bookings</a>
-          <a>FAQ</a>
-          <a>Contact</a>
+          <Link href="/SearchTickets">Book flight</Link>
+          <Link href="/Bookings">Bookings</Link>
+          <Link href="/FAQ">FAQ</Link>
+          <Link href="/ContactUs">Contact</Link>
         </nav>
 
         <div className={styles.auth}>
