@@ -20,7 +20,7 @@ const Footer = () => {
             <ul>
               <li><Link href="/AboutUs">About us</Link></li>
               <li><Link href="/SearchTickets">Partners</Link></li>
-              <li><Link href="/SearchTickets">Contact</Link></li>
+              <li><Link href="/ContactUs">Contact</Link></li>
               <li><Link href="/SearchTickets">Why travel with us</Link></li>
             </ul>
           </div>
@@ -28,9 +28,9 @@ const Footer = () => {
           <div className={styles.column}>
             <h4>Partner services</h4>
             <ul>
-              <li><Link href="/SearchTickets">Booking.com</Link></li>
-              <li><Link href="/SearchTickets">HERTZ car rentals</Link></li>
-              <li><Link href="/SearchTickets">Rentalcars.com</Link></li>
+              <li><Link href="https://www.booking.com/">Booking.com</Link></li>
+              <li><Link href="https://www.hertz.com/rentacar/reservation/">HERTZ car rentals</Link></li>
+              <li><Link href="https://www.rentalcars.com/">Rentalcars.com</Link></li>
             </ul>
           </div>
 
