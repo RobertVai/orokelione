@@ -1,30 +1,50 @@
 import React from "react";
 import styles from "./TicketCard.module.css";
+import { useBookings } from "@/contexts/BookingContext";
 
 type Segment = {
   departTime: string;
   arriveTime: string;
   departCode: string;
   arriveCode: string;
-  duration: string;     
+  duration: string;
   direct?: boolean;
 };
 
 type Props = {
   airline: string;
-  warning?: string;     
-  price: string;        
+  warning?: string;
+  price: string;
   segments: [Segment, Segment];
   onBook?: () => void;
   onDetails?: () => void;
 };
 
-const TicketCard: React.FC<Props> = ({ airline, warning, price, segments, onBook, onDetails }) => {
+const TicketCard: React.FC<Props> = ({
+  airline,
+  warning,
+  price,
+  segments,
+  onBook,
+  onDetails,
+}) => {
   const [outbound, inbound] = segments;
+  const { addBooking } = useBookings();
+
+  const handleBook = () => {
+    if (onBook) return onBook();
+    
+    addBooking({ airline, price, warning, segments });
+  };
+
+  const handleDetails = () => {
+    if (onDetails) return onDetails();
+    
+  };
 
   return (
     <article className={styles.wrap}>
-     
+      
       <div className={styles.left}>
         <div className={styles.airline}>{airline}</div>
 
@@ -59,17 +79,21 @@ const TicketCard: React.FC<Props> = ({ airline, warning, price, segments, onBook
         </div>
       </div>
 
-     
+      
       <div className={styles.divider} aria-hidden />
 
-     
+      
       <div className={styles.right}>
         {warning && <div className={styles.warning}>{warning}</div>}
         <div className={styles.from}>From</div>
         <div className={styles.price}>{price}</div>
 
-        <button className={styles.book} onClick={onBook}>Book</button>
-        <button className={styles.details} onClick={onDetails}>Flight details</button>
+        <button className={styles.book} onClick={handleBook}>
+          Book
+        </button>
+        <button className={styles.details} onClick={handleDetails}>
+          Flight details
+        </button>
       </div>
     </article>
   );
