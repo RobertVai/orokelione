@@ -7,6 +7,7 @@ import Footer from '@/components/Footer/Footer';
 
 
 
+
 function index() {
   return (
     <div className={styles.pagewrapper}>
@@ -15,12 +16,14 @@ function index() {
         <FlightSearch />
         <FlightResults />
         
+        
 
       
         
     </div>
     <Footer />
     </div>
+    
   )
 }
 
