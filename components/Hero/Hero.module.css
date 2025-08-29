@@ -6,30 +6,28 @@
 }
 
 .contentBox {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 6.6rem;
-    border: 1px solid white;
-    border-radius: 2px;
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 6.6rem;
+  border: 1px solid white;
+  border-radius: 2px;
 }
 
 .overlay {
   padding: 40px 20px;
 }
 
-
 .title {
-    max-width: 500px;
-    padding: 2rem 2rem;
+  max-width: 500px;
+  padding: 2rem 2rem;
   font-size: 50px;
   font-weight: 200;
   text-align: left;
 }
 
 .navTabs {
-    background-color: white;
+  background-color: white;
   display: flex;
   gap: 6.5rem;
   border-bottom: 1px solid black;
@@ -57,7 +55,6 @@
 .rent {
   display: flex;
   gap: 0.2rem;
-
 }
 .searchForm {
   display: flex;
@@ -75,7 +72,9 @@
   align-items: center;
 }
 
-.inline { display: inline-flex; }
+.inline {
+  display: inline-flex;
+}
 
 .select {
   height: 36px;
@@ -132,4 +131,175 @@
 
 .searchButton:hover {
   background-color: #e68600;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 680px;
+  }
+
+  .overlay {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 1.2;
+    padding: 0 0 10px;
+    max-width: none;
+    text-align: left;
+  }
+
+  .contentBox {
+    top: 0;
+    width: 100%;
+    max-width: 340px;
+    margin: 8px auto 0;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .navTabs {
+    border: 0;
+    border-radius: 8px 8px 0 0;
+    padding: 4px 6px;
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  .navTabs button {
+    color: #fff;
+    font-weight: 700;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 4px;
+  }
+
+  .activeTab {
+    background: #ff9900 !important;
+    color: #111;
+  }
+
+  .navTabs button {
+    font-size: 0;
+  }
+  .navTabs button:first-child::before {
+    content: "✈";
+    font-size: 18px;
+    line-height: 1;
+  }
+  .svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .searchForm {
+    border-radius: 0 0 8px 8px;
+    padding: 14px;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #cfd8e3;
+    border-top: 0;
+  }
+
+  .rowTop {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .inline,
+  .select {
+    width: 100%;
+  }
+
+  .checkbox {
+    justify-content: flex-start;
+    margin-top: 2px;
+  }
+  .checkbox input[type="checkbox"] {
+    accent-color: #ff9900;
+    width: 18px;
+    height: 18px;
+  }
+
+  .rowBottom {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .inputGroup {
+    width: 100%;
+  }
+
+  .inputGroup input {
+    height: 44px;
+    border: 1.5px solid #ffb24d;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 15px;
+    background-color: #fff;
+  }
+  .inputGroup input:focus {
+    outline: none;
+    border-color: #ff9900;
+    box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.15);
+  }
+
+  .rowBottom .inputGroup:nth-child(2) input {
+    padding-right: 36px;
+    background: #fff url("/svg/swap.svg") no-repeat right 10px center / 18px
+      18px;
+  }
+  .rowBottom .inputGroup:nth-child(3) input {
+    padding-right: 36px;
+    background: #fff url("/svg/calendar.svg") no-repeat right 10px center / 18px
+      18px;
+  }
+
+  .searchButton {
+    width: 100%;
+    height: 44px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #ff9900;
+    color: #161616;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .contentBox {
+    max-width: 560px;
+    margin: 12px auto 0;
+  }
+  .navTabs {
+    padding: 6px 8px;
+    gap: 10px;
+    
+
+  }
+  .rowTop {
+    gap: 14px;
+  }
+  .rowBottom {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .inputGroup {
+    flex: 1 1 100%;
+  }
+  .searchButton {
+    align-self: flex-start;
+    padding: 10px 18px;
+    border-radius: 8px;
+  }
+
+  .svg {
+    
+  }
+}
+
+.checkbox input[type="checkbox"] {
+  accent-color: #ff9900;
 }

@@ -21,3 +21,12 @@
   background-color: #f7941d;
   color: white;
 }
+
+@media (max-width: 480px) {
+  .buttonContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+    
+  }
+  }

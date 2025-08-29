@@ -47,3 +47,12 @@
 
 }
 
+@media (max-width: 480px) {
+  .contactWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 3rem;
+    
+  }
+}

@@ -8,16 +8,18 @@
   gap: 28px;
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 24px;
+  
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 16px;
-  background: #fff;
-  display: grid;
-  gap: 14px;
+  background: #eeecec;
+  font-size: 1.4rem;
+  gap: 16px;
 }
 
 .heading {
@@ -97,3 +99,11 @@
   cursor: pointer;
   font-size: 14px;
 }
+
+.sidebar input[type="checkbox"] {
+  accent-color: #ff9900;
+  width: 20px;
+  height: 17px;
+
+}
+

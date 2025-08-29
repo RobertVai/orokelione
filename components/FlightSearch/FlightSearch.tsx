@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./FlightSearch.module.css";
 
-// Города с кодами
 const cities = [
   { name: "Vilnius", code: "VNO" },
   { name: "Kaunas", code: "KUN" },
@@ -12,20 +11,14 @@ const cities = [
   { name: "Rome", code: "FCO" },
 ];
 
-// Фейковые билеты (чтобы тестить фильтрацию)
-const flights = [
-  { from: "Vilnius (VNO)", to: "London (LHR)", date: "2025-09-10" },
-  { from: "Kaunas (KUN)", to: "Paris (CDG)", date: "2025-09-12" },
-  { from: "Riga (RIX)", to: "Berlin (BER)", date: "2025-09-15" },
-  { from: "Vilnius (VNO)", to: "Rome (FCO)", date: "2025-09-20" },
-  { from: "London (LHR)", to: "Vilnius (VNO)", date: "2025-09-25" },
-];
+type Props = {
+  onSearch: (from: string, to: string, date: string) => void;
+};
 
-export default function FlightSearch() {
+export default function FlightSearch({ onSearch }: Props) {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [date, setDate] = useState("");
-  const [results, setResults] = useState(flights);
 
   const [suggestionsFrom, setSuggestionsFrom] = useState<typeof cities>([]);
   const [suggestionsTo, setSuggestionsTo] = useState<typeof cities>([]);
@@ -52,22 +45,14 @@ export default function FlightSearch() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    const filtered = flights.filter((f) => {
-      return (
-        (!from || f.from.toLowerCase().includes(from.toLowerCase())) &&
-        (!to || f.to.toLowerCase().includes(to.toLowerCase())) &&
-        (!date || f.date === date)
-      );
-    });
-    setResults(filtered);
+    onSearch(from, to, date);
   };
 
   return (
     <section className={styles.flightSearch}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Search your flight</h2>
+        
 
-        {/* Tabs */}
         <nav className={styles.tabs} aria-label="Product">
           <button className={`${styles.tab} ${styles.tabActive}`} aria-current="page">
             <span className={styles.tabIcon} aria-hidden>✈</span>
@@ -83,7 +68,6 @@ export default function FlightSearch() {
           </button>
         </nav>
 
-        {/* Form */}
         <form className={styles.form} onSubmit={handleSearch}>
           <div className={styles.rowTop}>
             <label className={styles.inline}>
@@ -111,7 +95,6 @@ export default function FlightSearch() {
           </div>
 
           <div className={styles.rowBottom}>
-            {/* From */}
             <label className={styles.field}>
               <span className={styles.label}>From:</span>
               <input
@@ -138,7 +121,6 @@ export default function FlightSearch() {
               )}
             </label>
 
-            {/* To */}
             <label className={styles.field}>
               <span className={styles.label}>To:</span>
               <input
@@ -165,7 +147,6 @@ export default function FlightSearch() {
               )}
             </label>
 
-            {/* Date */}
             <label className={`${styles.field} ${styles.fieldDate}`}>
               <span className={styles.label}>Date:</span>
               <input
@@ -181,22 +162,6 @@ export default function FlightSearch() {
             </button>
           </div>
         </form>
-
-        {/* Results */}
-        <div className={styles.results}>
-          <h3>Available flights</h3>
-          {results.length > 0 ? (
-            <ul>
-              {results.map((f, i) => (
-                <li key={i}>
-                  {f.from} → {f.to} | {f.date}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>No flights found.</p>
-          )}
-        </div>
       </div>
     </section>
   );

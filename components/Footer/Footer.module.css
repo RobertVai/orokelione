@@ -92,3 +92,15 @@
   .columns { grid-template-columns: 1fr; }
   .socials { justify-content: center; }
 }
+@media (max-width: 480px) {
+
+.columns {
+  position: relative;
+  right: 4.7rem;
+}
+
+.socials {
+  position: relative;
+  right: 7rem;
+}
+}
