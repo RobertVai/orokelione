@@ -100,3 +100,25 @@
 .dots li.active {
   background-color: #f7941d;
 }
+
+
+@media (max-width: 480px) {
+  .banner {
+  position: relative;
+   background: url('/images/catchthesun.jpg') center/cover no-repeat;
+   
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.button {
+  display: none;
+}
+
+.title {
+  width: 50%;
+}
+  }

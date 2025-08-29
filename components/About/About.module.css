@@ -25,3 +25,22 @@
     font-size: 2rem;
     padding: 0.2rem 0.2rem;
 }
+
+
+
+@media (max-width: 480px) {
+  .aboutWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    
+  }
+
+  .aboutWrapper img {
+    max-width: 390px;
+    border-radius: 5px;
+}
+
+
+
+}

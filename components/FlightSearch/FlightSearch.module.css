@@ -1,19 +1,11 @@
 .flightSearch {
-  padding: 28px 0 12px;
+  padding: 12px 0 12px;
   color: #0b1524;
 }
 
 .container {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 24px;
-}
-
-.title {
-  font-size: 32px;
-  line-height: 1.2;
-  font-weight: 800;
-  margin: 0 0 14px;
 }
 
 .tabs {
@@ -157,6 +149,17 @@
 .results li {
   margin-bottom: 6px;
 }
+
+.checkbox input[type="checkbox"] {
+  accent-color: #ff9900;
+}
+
+.checkbox input[type="checkbox"]:focus {
+  outline: 2px solid #ff9900;
+  outline-offset: 2px;
+}
+
+
 
 @media (max-width: 980px) {
   .rowBottom { grid-template-columns: 1fr 1fr; }
