@@ -35,7 +35,18 @@
 
 .sort {
   margin-bottom: 6px;
+  font-size: 1.1rem;
   text-align: right;
+  gap: 0.5rem;
+  
+}
+
+.sort select {
+    height: 42px;
+  border: 1.5px solid #f1a64a;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
 }
 
 .card {
@@ -107,3 +118,19 @@
 
 }
 
+
+
+@media (max-width: 760px) {
+.sidebar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+.sort {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
+}
+}
+}

@@ -3,54 +3,52 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import TicketCard from "@/components/TicketCard/TicketCard";
 import { useBookings } from "@/contexts/BookingContext";
-import styles from './bookings.module.css'
+import styles from "./bookings.module.css";
+
 
 export default function BookingsPage() {
   const { bookings, removeBooking, clearBookings } = useBookings();
 
   return (
     <div className={styles.pagewrapper}>
-    <div className={styles.container}>
-      <Header />
-      <main style={{ maxWidth: 1100, margin: "0 auto", padding: "24px 16px 60px" }}>
-        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 12 }}>My bookings</h1>
+      <div className={styles.container}>
+        <div className={styles.header}>
+        <Header />
+        </div>
+        <main className={styles.main}>
+          <h1 className={styles.title}>My bookings</h1>
 
-        {bookings.length === 0 ? (
-          <p>No booked flights yet.</p>
-        ) : (
-          <>
-            <div style={{ display: "flex", gap: 12, marginBottom: 12 }}>
-              <button
-                onClick={clearBookings}
-                style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e5e7eb", background: "#fff", cursor: "pointer" }}
-              >
-                Clear all
-              </button>
-            </div>
-
-            {bookings.map(b => (
-              <div key={b.id} style={{ marginBottom: 16 }}>
-                <TicketCard
-                  airline={b.airline}
-                  warning={b.warning}
-                  price={b.price}
-                  segments={b.segments}
-                />
-                <button
-                  onClick={() => removeBooking(b.id)}
-                  style={{ marginTop: 8, padding: "8px 12px", borderRadius: 8, border: "1px solid #e5e7eb", background: "#fff", cursor: "pointer" }}
-                >
-                  Remove
+          {bookings.length === 0 ? (
+            <p className={styles.empty}>No booked flights yet.</p>
+          ) : (
+            <>
+              <div className={styles.actions}>
+                <button className={styles.btn} onClick={clearBookings}>
+                  Clear all
                 </button>
               </div>
-            ))}
-          </>
-          
-        )}
-      </main>
-      
-    </div>
-    <Footer />
+
+              {bookings.map((b) => (
+                <div key={b.id} className={styles.bookingItem}>
+                  <TicketCard
+                    airline={b.airline}
+                    warning={b.warning}
+                    price={b.price}
+                    segments={b.segments}
+                  />
+                  <button
+                    className={`${styles.btn} ${styles.removeBtn}`}
+                    onClick={() => removeBooking(b.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
+              ))}
+            </>
+          )}
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }
