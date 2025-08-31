@@ -53,7 +53,7 @@ const TicketCard: React.FC<Props> = ({
           <time className={styles.time}>{outbound.departTime}</time>
           <div className={styles.mid}>
             <span className={styles.duration}>{outbound.duration}</span>
-            <span className={styles.line} aria-hidden />
+            <span className={styles.line}>────────────────────────</span>
           </div>
           <time className={styles.time}>{outbound.arriveTime}</time>
           <div className={styles.codes}>
@@ -68,7 +68,7 @@ const TicketCard: React.FC<Props> = ({
           <time className={styles.time}>{inbound.departTime}</time>
           <div className={styles.mid}>
             <span className={styles.duration}>{inbound.duration}</span>
-            <span className={styles.line} aria-hidden />
+            <span className={styles.line}>────────────────────────</span>
           </div>
           <time className={styles.time}>{inbound.arriveTime}</time>
           <div className={styles.codes}>

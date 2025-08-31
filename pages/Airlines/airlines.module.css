@@ -12,3 +12,21 @@
   margin: 0 auto;
   
 }
+
+
+@media (max-width: 1002px) {
+    .container {
+      height: 120vh;
+    }
+    
+
+  }
+
+
+  @media (max-width: 480px) {
+    .container {
+      height: 130vh;
+    }
+    
+
+  }

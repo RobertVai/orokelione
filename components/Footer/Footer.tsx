@@ -39,7 +39,7 @@ const Footer = () => {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/SearchTickets">Book flight</Link></li>
               <li><Link href="/Airlines">Airlines</Link></li>
-              <li><Link href="/SearchTickets">Bookings</Link></li>
+              <li><Link href="/Bookings">Bookings</Link></li>
               <li><Link href="/FAQ">FAQ</Link></li>
             </ul>
           </div>

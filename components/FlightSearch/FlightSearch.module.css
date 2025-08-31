@@ -169,3 +169,62 @@
 @media (max-width: 520px) {
   .title { font-size: 26px; }
 }
+
+@media (max-width: 460px) {
+ .input {
+  width: 330px;
+  text-align: center;
+ }
+.select {
+  width: 330px;
+  text-align: center;
+}
+
+.checkbox {
+  display: none; 
+  
+
+ }
+.rowTop{
+  display: flex;
+  flex-direction: column;
+}
+
+.rowBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchBtn {
+  width: 333px;
+  margin-top: 0.65rem;
+  border-radius: 0.7rem;
+}
+
+
+
+}
+
+@media (max-width: 370px) {
+.sidebar {
+  display: none;
+}
+
+.searchBtn {
+  width: 290px;
+  margin-top: 0.65rem;
+  border-radius: 0.7rem;
+}
+
+ .input {
+  width:290px;
+  text-align: center;
+ }
+.select {
+  width: 290px;
+  text-align: center;
+}
+
+
+}

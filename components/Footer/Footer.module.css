@@ -90,17 +90,21 @@
 }
 @media (max-width: 560px) {
   .columns { grid-template-columns: 1fr; }
-  .socials { justify-content: center; }
+.socials {
+  display: flex;
+  justify-content: flex-start;
 }
-@media (max-width: 480px) {
-
 .columns {
   position: relative;
   right: 4.7rem;
 }
+}
+@media (max-width: 480px) {
+
+
 
 .socials {
-  position: relative;
-  right: 7rem;
+  display: flex;
+  justify-content: flex-start;
 }
 }
