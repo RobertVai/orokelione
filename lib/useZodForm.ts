@@ -47,7 +47,7 @@ export function useZodForm<T extends Record<string, any>>(opts: {
     const flat = parsed.error.flatten().fieldErrors;
     const next: Partial<Record<keyof T, string>> = {};
     Object.keys(flat).forEach(k => {
-      // @ts-expect-error
+      // @ts-expect-error 
       next[k] = flat[k]?.[0];
     });
     setErrors(next);
