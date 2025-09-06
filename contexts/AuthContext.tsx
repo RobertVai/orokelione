@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { api } from "@/lib/api"
+import { api, apiJson } from "@/lib/api";
 
 type User = { id: string; name: string; email: string } | null;
 type Ctx = {
@@ -16,42 +16,59 @@ export default function AuthProvider({ children }: { children: React.ReactNode }
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    
     (async () => {
       try {
+        const access = typeof window !== "undefined" ? localStorage.getItem("access") : null;
+        if (!access) { setLoading(false); return; }              
+
         const r = await api("/api/auth/me");
-        if (r.ok) {
+        if (!r.ok) {
+          
+          localStorage.removeItem("access");
+          localStorage.removeItem("refresh");
+          setUser(null);
+        } else {
           const data = await r.json();
           setUser(data.user || null);
         }
-      } finally { setLoading(false); }
+      } catch {
+        
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
     })();
   }, []);
 
   async function login(email: string, password: string) {
-    const r = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
-    const data = await r.json();
-    if (!r.ok) return false;
-    localStorage.setItem("access", data.access);
-    localStorage.setItem("refresh", data.refresh);
-    setUser(data.user);
-    return true;
+    try {
+      const data = await apiJson<{ access: string; refresh: string; user: User }>(
+        "/api/auth/login",
+        { method: "POST", body: JSON.stringify({ email, password }) }
+      );
+      localStorage.setItem("access", data.access);
+      localStorage.setItem("refresh", data.refresh);
+      setUser(data.user);
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   async function register(name: string, email: string, password: string) {
-    const r = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, password }),
-    });
-    const data = await r.json();
-    if (!r.ok) return false;
-    localStorage.setItem("access", data.access);
-    localStorage.setItem("refresh", data.refresh);
-    setUser(data.user);
-    return true;
+    try {
+      const data = await apiJson<{ access: string; refresh: string; user: User }>(
+        "/api/auth/register",
+        { method: "POST", body: JSON.stringify({ name, email, password }) }
+      );
+      localStorage.setItem("access", data.access);
+      localStorage.setItem("refresh", data.refresh);
+      setUser(data.user);
+      return true;
+    } catch (e: any) {
+      
+      return false;
+    }
   }
 
   function logout() {
