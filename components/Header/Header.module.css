@@ -23,7 +23,8 @@
     gap: 0.5rem;
     
 }
-.mainName {
+.mainName a{
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
   color: #0063BD;
@@ -174,6 +175,37 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
 
 
 .show { display: flex !important; }
+
+
+.bookingsLink {
+  position: relative; 
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffb302; 
+  color: #111;
+  transform-origin: center;
+}
+
+.bump { animation: badge-bump .34s ease; }
+
+@keyframes badge-bump {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
 
 @media (max-width: 900px) {
  

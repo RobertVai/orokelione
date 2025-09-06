@@ -2,29 +2,36 @@ import { useState } from "react";
 import styles from "../Header/Header.module.css";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
+import { useBookings } from "@/contexts/BookingContext";
 
 export default function Header() {
   const { user, logout } = useAuth();
   const firstName = user?.name?.split(" ")?.[0] || user?.name || "";
   const [open, setOpen] = useState(false);
+  const { bookings } = useBookings();
 
   return (
     <header className={styles.header}>
       <div className={styles.navbar}>
         <div className={styles.logo}>
           <div className={styles.emblem}>✈</div>
-          <div className={styles.mainName}>orokelione.lt</div>
+          <div className={styles.mainName}><Link href="/">orokelione.lt</Link></div>
         </div>
 
-        {/* твои ссылки, как были */}
+       
         <nav className={styles.navLinks}>
           <Link href="/SearchTickets">Book flight</Link>
-          <Link href="/Bookings">Bookings</Link>
+
+          
+<Link href="/Bookings" className={styles.bookingsLink}>
+  Bookings <span id="bookings-badge" className={styles.badge}>{bookings.length}</span>
+</Link>
+
           <Link href="/FAQ">FAQ</Link>
           <Link href="/ContactUs">Contact</Link>
         </nav>
 
-        {/* твой блок авторизации, как был */}
+       
         <div className={styles.auth}>
           {!user ? (
             <>
@@ -43,7 +50,7 @@ export default function Header() {
           )}
         </div>
 
-        {/* Кнопка бургера — видна только на мобильных (скрыта стилями на Desktop) */}
+        
         <button
           className={styles.burgerBtn}
           aria-label="Menu"
@@ -55,16 +62,22 @@ export default function Header() {
         </button>
       </div>
 
-      {/* затемнение под меню */}
+    
       <div
         className={`${styles.burgerBackdrop} ${open ? styles.show : ""}`}
         onClick={() => setOpen(false)}
       />
 
-      {/* Выпадающее меню бургера (на мобильных) */}
+     
       <nav className={`${styles.burgerMenu} ${open ? styles.show : ""}`}>
         <Link href="/SearchTickets" onClick={() => setOpen(false)}>Book flight</Link>
-        <Link href="/Bookings" onClick={() => setOpen(false)}>Bookings</Link>
+
+        
+        <Link href="/Bookings" onClick={() => setOpen(false)}>
+          Bookings
+          
+        </Link>
+
         <Link href="/FAQ" onClick={() => setOpen(false)}>FAQ</Link>
         <Link href="/ContactUs" onClick={() => setOpen(false)}>Contact</Link>
 
