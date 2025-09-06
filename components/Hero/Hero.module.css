@@ -135,7 +135,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 680px;
+    min-height: 180px;
   }
 
   .overlay {
@@ -147,7 +147,7 @@
     line-height: 1.2;
     padding: 0 0 10px;
     max-width: none;
-    text-align: left;
+    text-align: center;
   }
 
   .contentBox {
@@ -270,39 +270,29 @@
 }
 
 @media (min-width: 482px) and (max-width: 1135px) {
-
   .contentBox {
     border: none;
   }
 
-.navTabs {
-  position: relative;
+  .navTabs {
+    position: relative;
     bottom: 5rem;
-}
+  }
   .searchForm {
     position: relative;
     bottom: 5rem;
-    
   }
-
 }
 
-
-
 @media (min-width: 481px) and (max-width: 660px) {
-
   .contentBox {
     max-width: 560px;
     margin: 12px auto 0;
   }
   .navTabs {
-
     padding: 6px 8px;
     gap: 10px;
-    
-
   }
-
 
   .rowTop {
     gap: 14px;
@@ -313,14 +303,11 @@
   }
 
   .searchButton {
-    
     padding: 10px 18px;
     border-radius: 8px;
   }
 
-.checkbox input[type="checkbox"] {
-  accent-color: #ff9900;
+  .checkbox input[type="checkbox"] {
+    accent-color: #ff9900;
+  }
 }
-
-}
-
