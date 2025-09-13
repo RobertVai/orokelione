@@ -31,6 +31,7 @@
   display: flex;
   gap: 6.5rem;
   border-bottom: 1px solid black;
+  
 }
 
 .navTabs button {
@@ -45,6 +46,7 @@
 .activeTab {
   background-color: #da7605 !important;
   color: rgb(17, 17, 17);
+  
 }
 
 .svg {
@@ -55,6 +57,7 @@
 .rent {
   display: flex;
   gap: 0.2rem;
+  
 }
 .searchForm {
   display: flex;

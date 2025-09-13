@@ -27,9 +27,9 @@ const Footer = () => {
           <div className={styles.column}>
             <h4>Partner services</h4>
             <ul>
-              <li><Link href="https://www.booking.com/">Booking.com</Link></li>
-              <li><Link href="https://www.hertz.com/rentacar/reservation/">HERTZ car rentals</Link></li>
-              <li><Link href="https://www.rentalcars.com/">Rentalcars.com</Link></li>
+              <li><Link href="https://www.booking.com/" target="_blank" rel="noopener noreferrer">Booking.com</Link></li>
+              <li><Link href="https://www.hertz.com/rentacar/reservation/" target="_blank" rel="noopener noreferrer">HERTZ car rentals</Link></li>
+              <li><Link href="https://www.rentalcars.com/" target="_blank" rel="noopener noreferrer">Rentalcars.com</Link></li>
             </ul>
           </div>
 

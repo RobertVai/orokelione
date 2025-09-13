@@ -1,21 +1,22 @@
-import styles from '@/components/ActionButtons/Actionbuttons.module.css'
+import Link from "next/link";
+import styles from "@/components/ActionButtons/Actionbuttons.module.css";
 
 const buttons = [
-  'Top destinations',
-  'Group booking',
-  'Flight status',
-  'My bookings',
-  'Travel documents',
-  'Gift cards',
+  { label: "Top destinations", href: "/SearchTickets" },
+  { label: "Group booking", href: "/SearchTickets" },
+  { label: "Partner Airlines", href: "/Airlines" },
+  { label: "My bookings", href: "/Bookings" },
+  { label: "Travel documents", href: "/FAQ" },
+  { label: "Contact Us", href: "/ContactUs" },
 ];
 
 const ActionButtons = () => {
   return (
     <div className={styles.buttonContainer}>
-      {buttons.map((label) => (
-        <button key={label} className={styles.button}>
+      {buttons.map(({ label, href }) => (
+        <Link key={label} href={href} className={styles.button}>
           {label}
-        </button>
+        </Link>
       ))}
     </div>
   );

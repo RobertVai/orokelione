@@ -102,6 +102,16 @@
 }
 
 
+@media (max-width: 850px) {
+
+
+.button {
+  display: none;
+}
+
+
+  }
+
 @media (max-width: 480px) {
   .banner {
   position: relative;

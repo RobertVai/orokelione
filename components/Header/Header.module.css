@@ -137,7 +137,7 @@
   top: 64px;        
   left: 0;
   right: 0;
-  background: #fffdfd;
+  background: #e68600;
   border-bottom: 1px solid #e5e7eb;
   padding: 16px;
   z-index: 9999;    
@@ -147,9 +147,10 @@
 .burgerMenu a {
   text-decoration: none;
   text-align: center;
-  border: 1px solid rgb(211, 210, 210);
+  border: 0.5px solid #e68600;
+  background-color: rgb(236, 232, 232);
   border-radius: 0.5rem;
-box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   padding: 0.5rem;
   color: #111;
   font-size: 16px;

@@ -6,6 +6,8 @@
   padding: 0 4rem;
 }
 
+
+
 .pagewrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -18,6 +20,12 @@
   padding: 8px;
   font-size: 14px;
   text-align: center;
+  
+}
+
+.alert a {
+  text-decoration: none;
+  color: #000000;
 }
 
 @media (max-width: 480px) {

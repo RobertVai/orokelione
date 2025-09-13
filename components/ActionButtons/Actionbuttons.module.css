@@ -4,6 +4,16 @@
   width: 100%;
   justify-content: space-between;
   margin: 3.5rem 0;
+  
+  
+  
+}
+
+.buttonContainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .button {
@@ -15,6 +25,10 @@
   font-size: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
+  text-decoration: none;
+  text-align: center;
+
+  
 }
 
 .button:hover {
@@ -26,7 +40,7 @@
   .buttonContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.4rem;
+    gap: 1rem;
     
   }
   }
